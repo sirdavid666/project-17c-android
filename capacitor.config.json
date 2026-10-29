@@ -1,6 +1,6 @@
 {
-  "appId": "com.kingdave.project17c",
-  "appName": "Project 17C",
+  "appId": "com.kingdave.bionexa",
+  "appName": "BioNexa",
   "webDir": "dist",
   "bundledWebRuntime": false
 }
