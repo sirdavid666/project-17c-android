@@ -1,3 +1,4 @@
+
 name: Build BioNexa Android APK
 
 on:
@@ -23,6 +24,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: npm
 
       - name: Set up Java
         uses: actions/setup-java@v4
@@ -33,6 +35,11 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
+      - name: Install Android SDK packages
+        run: |
+          sdkmanager --install "platform-tools" "platforms;android-35" "build-tools;35.0.0"
+          yes | sdkmanager --licenses
+
       - name: Install dependencies
         run: npm install
 
@@ -42,6 +49,7 @@ jobs:
           test -f src/formulas.js
           test -f src/style.css
           test -f assets/icon.png
+          test -f assets/icon-foreground.png
           node --check src/main.js
           node --check src/formulas.js
 
