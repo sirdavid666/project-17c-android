@@ -3,7 +3,7 @@ import { referenceItems, areas } from './formulas.js';
 
 const app = document.querySelector('#app');
 
-const GEMINI_API_KEY = 'AQ.Ab8RN6KT3S0dsR9WkbxBpq1is8qznbe5XlUzNTQmotJ3PQpKFg';
+const GEMINI_API_KEY = 'AQ.Ab8RN6KrzmoopnGaiA5oXANKUuUheccWzmUYA9J1x4h1oyFGAw';
 const GEMINI_MODEL = 'gemini-3.8-flash';
 
 const read = (key, fallback) => {
